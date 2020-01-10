@@ -1,0 +1,125 @@
+<div class="main-header">
+  <h3>Bottles Saved: {{count}}</h3>
+  <i class="fas fa-wifi" *ngIf="wifistate" routerLink="admin"></i>
+  <i class="fas fa-wifi-slash" *ngIf="!wifistate"></i>
+</div>
+<div class="container">
+  <h1 class=" d-flex justify-content-center primary-text mt-3 mb-3">Choose Water</h1>
+  <div class="d-flex flex-row justify-content-center ">
+    <div *ngFor="let waterType of waterTypes; let i=index">
+      <div class="d-flex flex-column px-5">
+        <input type="radio" name={{waterType.type}} id={{waterType.value}} class="input-hidden"
+          [checked]="waterType.isChecked" />
+        <label for={{waterType.value}}>
+          <img src={{waterType.imageSrc}} height="100px" width="100px" alt="">
+          <div class="caption">{{waterType.caption}}</div>
+        </label>
+
+      </div>
+    </div>
+  </div>
+
+  <h1 class=" d-flex justify-content-center primary-text mt-4 mb-3">Choose up to two flavors</h1>
+  <div class="d-flex flex-row justify-content-center flex-wrap">
+    <div *ngFor="let flavor of flavours; let i=index">
+      <div class="d-flex flex-column px-5">
+        <input type="checkbox" id={{flavor.slot}} class="input-hidden" (change)="onChecked(flavor,i)"
+          name={{flavor.name}} [(ngModel)]="flavor.isChecked">
+        <label for={{flavor.slot}}>
+          <img src={{flavor.imagesrc}} height="100px" width="100px" alt="">
+          <div class="caption">{{flavor.name}}</div>
+        </label>
+
+      </div>
+    </div>
+
+  </div>
+
+  <h1 class=" d-flex justify-content-center primary-text mt-4 mb-3">Choose enhancement</h1>
+
+  <div class="d-flex flex-row justify-content-center">
+    <div *ngFor="let enhancement of enhancements; let i=index" [formGroup]="formGroup">
+      <div class="d-flex flex-column px-5">
+        <input type="radio" class="input-hidden" id={{enhancement.slot}} name={{enhancement.type}}
+          [value]="enhancement.value"  >
+        <label for={{enhancement.slot}}>
+          <img src={{enhancement.imageSrc}} height="100px" width="100px" alt="">
+          <div class="caption">{{enhancement.name}}<br>{{enhancement.caption}}</div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex flex-row justify-content-between">
+    <div class="d-flex flex-column mt-5"></div>
+    <div class="d-flex flex-column mt-5 ml-5 custom-margin ">
+      <img src={{pressButton}} class="main-button" height="150px" width="150px" alt="" (mousedown)="mouseDown()"
+        (mouseup)="mouseUp()" (mouseleave)="mouseUp()">
+    </div>
+    <div class="d-flex flex-column justify-content-end mt-5">
+      <img src="assets/images/nutrition-facts-button.png" height="90px" width="90px" alt="" data-toggle="modal"
+        data-target=".nutritionFactsModal">
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Area -->
+
+<!-- Nutrition  Modal -->
+
+<!-- Modal -->
+<div class="modal fade nutritionFactsModal default-text " tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <i class="fa fa-times cross-icon"></i>
+    <div class="modal-content ">
+      <div class="header d-flex justify-content-center">Nutrition Facts</div>
+      <div class="d-flex justify-content-center tertiary-text">[Still Water]</div>
+      <div class="container tertiary-text">
+        <ul class="nutrition-facts">
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+          <li class="nutrition-section">
+            <span>Calories</span>0
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>

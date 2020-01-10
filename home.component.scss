@@ -1,0 +1,170 @@
+$spacer: 6rem;
+.main-header{
+    background-color: #00bcda;
+    padding: 20px;
+    display:flex;
+    justify-content: space-between;
+}
+.fa-wifi:before {
+    content: "\f1eb";
+    font-size: 35px;
+}
+.container .primary-text{
+  color: black;
+  font-size: inherit;
+}
+.caption{
+    color:black;
+    display: block;
+    margin-left: 25px;
+    font-size: 1rem;
+    color: #00bcda;
+}
+.caption-sparkling{
+    color:black;
+    display: block;
+    margin-left: 31px;
+    font-size: 1rem
+}
+.input-hidden {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  input[type=radio]:checked + label>img {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 3px #00bcda;
+  }
+  
+  /* Stuff after this is only to make things more pretty */
+  input[type=radio] + label>img {
+    width: 100px;
+    height: 100px;
+    transition: 500ms all;
+  }
+  .custom-margin{
+      padding-left: 50px;
+  }
+// .center{
+//     display: flex;
+// }
+// .still-water{
+//     background-image: url(/src/assets/images/still_water.png);
+// }
+input[type=checkbox]:checked + label>img {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 3px #00bcda;
+}
+input[type=checkbox] + label>img {
+    width: 100px;
+    height: 100px;
+    transition: 500ms all;
+}
+.default-text{
+    font-size: inherit;
+    color: #121212;
+}
+.secondary-text{
+
+}
+.tertiary-text{
+    font-size: 0.7rem;
+    color: #121212;  
+}
+
+
+.nutrition-facts {
+  
+    &,
+    ul {
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding:20px
+    }
+  
+    ul {
+      flex: 0 0 100%;
+  
+      li {
+        margin-left: $spacer * 0.5;
+        margin-right: $spacer * -0.125;
+      }
+    }
+  
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-left: $spacer * 0.125;
+      padding-right: $spacer * 0.125;
+      border-top: 1px solid;
+    }
+}
+
+.circular-border{
+    border: 3px solid #00bcda;
+    border-radius: 70%;
+}
+.modal-content {
+    background-color: #fffffF;
+    position: relative;
+    border-radius: 50%;
+    width: 100%;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 500px;
+    border: 5px solid #00bcda;
+  }
+  @media only screen and (max-width: 400px) {
+    .nutrition-facts {
+  
+      &,
+      ul {
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding:20px
+      }
+    
+      ul {
+        flex: 0 0 100%;
+    
+        li {
+          margin-left: $spacer * 0.5;
+          margin-right: $spacer * -0.125;
+        }
+      }
+    
+      li {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: $spacer * 0.125;
+        padding-right: $spacer * 0.125;
+        border-top: 1px solid;
+      }
+  }
+  .modal-content {
+    background-color: #fffffF;
+    position: relative;
+    border-radius: 50%;
+    width: 90%;
+    height: 140vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 600px;
+    border: 5px solid #00bcda;
+    margin-left:15px;
+  }
+  
+  }
+  .cross-icon{
+    left:0;
+  }
+  

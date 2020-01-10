@@ -1,0 +1,57 @@
+.primary-text{
+    color:#121212;
+}
+.secondary-text{
+    color:#121212;
+    font-size: 1rem;  
+}
+
+.signin-button{
+    background-color: #00bcda;
+    color: #ffffff;
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 30%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      .input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #00bcda;
+        color: #555;
+        box-sizing: border-box;
+        font-family: 'Arvo';
+        font-size: 18px;
+        height: 50px;
+        left: 50%;
+        margin: -25px 0 0 -100px;
+        padding: 10px 0px;
+        position: relative;
+        top: 50%;
+        width: 200px;
+      
+        &:focus {
+          outline: none;    
+        }
+      }
+      
+      input::-webkit-input-placeholder {
+        color: #AAA;
+      }
+      
+      input:focus::-webkit-input-placeholder {
+        color: dodgerblue;
+      }
+      
+      .input:focus+.underline {
+        transform: scale(1);
+      }
+      

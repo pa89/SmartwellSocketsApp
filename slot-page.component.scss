@@ -1,0 +1,92 @@
+.primary-text{
+    color: #121212;
+}
+.secondary-text{
+    color: #121212;
+    font-size: 1rem;
+}
+.tertiary-text{
+    color: #121212;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.service-button{
+    background-color:darken($color: #cdcdcd, $amount: 20);
+    color: #ffffff;
+    width: 150px;
+    height: 40px;
+    border: none;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.setup-button{
+    background-color: #00bcda;
+    color: #ffffff;
+    width: 150px;
+    height: 40px;
+    border: none;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.modal-button{
+    background-color: #00bcda;
+    color: #ffffff;
+    width: 250px;
+    height: 45px;
+    border: none;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+// .modal-content {
+//     position: relative;
+//     display: -webkit-box;
+//     display: flex;
+//     -webkit-box-orient: vertical;
+//     -webkit-box-direction: normal;
+//     flex-direction: column;
+//     width: 90%;
+//     pointer-events: auto;
+//     background-color: #fff;
+//     background-clip: padding-box;
+//     border: 1px solid rgba(0,0,0,.2);
+//     border-radius: .3rem;
+//     outline: 0;
+// }
+// .loader:before {
+//     content: '';
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     position: fixed;
+//     background-color: rgba($color: #000000, $alpha: 0.3);
+// }
+.loader-effect{
+    background-color: #ffffff;
+    padding: 30px;
+}
+.loader {
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    background: url('~/assets/images/spritesheet-x.png') no-repeat;
+    animation: walk 4s steps(60) infinite;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    margin: auto;
+    overflow: hidden;
+    z-index: 1200;
+ }
+ @-webkit-keyframes walk {
+    from { background-position:    0   0; }
+    to   { background-position: -1000px 0; }
+ }
+ 
+ @-moz-keyframes walk {
+    from { background-position:    0   0; }
+    to   { background-position: -1000px 0; }
+ }
